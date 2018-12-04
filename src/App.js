@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import MainContainer from "./components/MainContainer";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>What To Order</p>
-        </header>
+        <Header title="What To Order" />
+        <Sidebar />
+        <MainContainer />
       </div>
     );
   }
