@@ -1,9 +1,16 @@
-import React, { Component } from 'react';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import MainContainer from './components/MainContainer';
+import React from 'react';
+import Header from './Header';
+import Sidebar from './Sidebar';
+import MainContainer from './MainContainer';
+import sampleRestaurants from '../sampledata/sampleRestaurants';
 
-class App extends Component {
+class App extends React.Component {
+  state = {
+    restaurants: {}
+  };
+  loadSampleRestaurants = () => {
+    this.setState({ restaurants: sampleRestaurants });
+  };
   render() {
     return (
       <div className="App">
@@ -22,6 +29,12 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <button
+          className="btn btn-primary"
+          onClick={this.loadSampleRestaurants}
+        >
+          Laod data
+        </button>
       </div>
     );
   }

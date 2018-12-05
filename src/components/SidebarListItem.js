@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
-import './styles/RestuarantListItem.css';
+import React from 'react';
+import './styles/SidebarListItem.css';
 
-class RestuarantListItem extends React.Component {
+class SidebarListItem extends React.Component {
   render() {
     return (
       <div className="restaurant-list-item border-bottom">
@@ -23,4 +23,4 @@ class RestuarantListItem extends React.Component {
   }
 }
 
-export default RestuarantListItem;
+export default SidebarListItem;

@@ -4,7 +4,7 @@ import ItemCard from './ItemCard';
 class MainContainer extends React.Component {
   render() {
     return (
-      <main class="row">
+      <main className="row">
         <div className="col-12">
           <h2>Restaurant Name</h2>
         </div>
