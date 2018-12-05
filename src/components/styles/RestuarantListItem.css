@@ -1,0 +1,15 @@
+.restaurant-list-item {
+  display: flex;
+  padding: 1rem 0;
+}
+.restaurant-list-item:hover {
+  transform: scale(1.015);
+  transition-duration: 150ms;
+  cursor: pointer;
+}
+.restaurant-list-item__img {
+  width: 50%;
+  margin-right: 5px;
+}
+.restaurant-list-item__desc {
+}
