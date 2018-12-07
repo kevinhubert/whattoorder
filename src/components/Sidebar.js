@@ -3,39 +3,21 @@ import SidebarListItem from './SidebarListItem';
 
 class Sidebar extends React.Component {
   render() {
+    const restaurants = this.props.restaurant;
     return (
       <aside>
         <h3>Restuarants</h3>
-        <SidebarListItem
-          restaurantName="Awesome Restaurant 1"
-          restaurantDesc="This place totes rocks my socks off"
-          restaurantReview="5 Stars"
-        />
-        <SidebarListItem
-          restaurantName="Awesome Restaurant 1"
-          restaurantDesc="This place totes rocks my socks off"
-          restaurantReview="5 Stars"
-        />
-        <SidebarListItem
-          restaurantName="Awesome Restaurant 1"
-          restaurantDesc="This place totes rocks my socks off"
-          restaurantReview="5 Stars"
-        />
-        <SidebarListItem
-          restaurantName="Awesome Restaurant 1"
-          restaurantDesc="This place totes rocks my socks off"
-          restaurantReview="5 Stars"
-        />
-        <SidebarListItem
-          restaurantName="Awesome Restaurant 1"
-          restaurantDesc="This place totes rocks my socks off"
-          restaurantReview="5 Stars"
-        />
-        <SidebarListItem
-          restaurantName="Awesome Restaurant 1"
-          restaurantDesc="This place totes rocks my socks off"
-          restaurantReview="5 Stars"
-        />
+        {restaurants.map(restaurant => {
+          return (
+            <SidebarListItem
+              key={restaurant.name}
+              restaurantName={restaurant.name}
+              restaurantDesc={restaurant.tagline}
+              restaurantReview={`${restaurant.rating} Stars`}
+              restaurantImage={restaurant.image}
+            />
+          );
+        })}
       </aside>
     );
   }

@@ -1,15 +1,17 @@
-.restaurant-list-item {
+.sidebar-list-item {
   display: flex;
   padding: 1rem 0;
+  height: 150px;
 }
-.restaurant-list-item:hover {
+.sidebar-list-item:hover {
   transform: scale(1.015);
   transition-duration: 150ms;
   cursor: pointer;
 }
-.restaurant-list-item__img {
+.sidebar-list-item__img {
   width: 50%;
   margin-right: 5px;
 }
-.restaurant-list-item__desc {
+.sidebar-list-item__desc {
+  width: 50%;
 }

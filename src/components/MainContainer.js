@@ -8,42 +8,17 @@ class MainContainer extends React.Component {
         <div className="col-12">
           <h2>Restaurant Name</h2>
         </div>
-        <div className="col-4">
-          <ItemCard
-            itemTitle="Damn Good Salad"
-            itemDesc="This shit is off the hook yo - you gotta try it and leave a review!"
-          />
-        </div>
-        <div className="col-4">
-          <ItemCard
-            itemTitle="Damn Good Salad"
-            itemDesc="This shit is off the hook yo - you gotta try it and leave a review!"
-          />
-        </div>
-        <div className="col-4">
-          <ItemCard
-            itemTitle="Damn Good Salad"
-            itemDesc="This shit is off the hook yo - you gotta try it and leave a review!"
-          />
-        </div>
-        <div className="col-4">
-          <ItemCard
-            itemTitle="Damn Good Salad"
-            itemDesc="This shit is off the hook yo - you gotta try it and leave a review!"
-          />
-        </div>
-        <div className="col-4">
-          <ItemCard
-            itemTitle="Damn Good Salad"
-            itemDesc="This shit is off the hook yo - you gotta try it and leave a review!"
-          />
-        </div>
-        <div className="col-4">
-          <ItemCard
-            itemTitle="Damn Good Salad"
-            itemDesc="This shit is off the hook yo - you gotta try it and leave a review!"
-          />
-        </div>
+        {this.props.dishes.map(dish => {
+          return (
+            <div className="col-4">
+              <ItemCard
+                itemTitle={dish.name}
+                itemDesc={dish.desc}
+                itemImage={dish.image}
+              />
+            </div>
+          );
+        })}
       </main>
     );
   }

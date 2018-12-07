@@ -3,15 +3,15 @@ import './styles/SidebarListItem.css';
 
 class SidebarListItem extends React.Component {
   render() {
+    const styles = {
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      backgroundImage: `url(${this.props.restaurantImage})`
+    };
     return (
-      <div className="restaurant-list-item border-bottom">
-        <div className="restaurant-list-item__img">
-          <img
-            src="https://images.unsplash.com/photo-1484659619207-9165d119dafe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-            alt=""
-          />
-        </div>
-        <div className="restaurant-list-item__desc">
+      <div className="sidebar-list-item border-bottom">
+        <div className="sidebar-list-item__img" style={styles} />
+        <div className="sidebar-list-item__desc">
           <div>
             <strong>{this.props.restaurantName}</strong>
           </div>

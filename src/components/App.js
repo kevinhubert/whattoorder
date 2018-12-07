@@ -2,15 +2,17 @@ import React from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import MainContainer from './MainContainer';
-import sampleRestaurants from '../sampledata/sampleRestaurants';
+import restaurants from '../sampledata/restaurants';
+import dishes from '../sampledata/dishes';
 
 class App extends React.Component {
-  state = {
-    restaurants: {}
-  };
-  loadSampleRestaurants = () => {
-    this.setState({ restaurants: sampleRestaurants });
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      restaurants,
+      dishes
+    };
+  }
   render() {
     return (
       <div className="App">
@@ -22,19 +24,13 @@ class App extends React.Component {
           </div>
           <div className="row">
             <div className="col-4">
-              <Sidebar />
+              <Sidebar restaurant={this.state.restaurants} />
             </div>
             <div className="col-8">
-              <MainContainer />
+              <MainContainer dishes={this.state.dishes} />
             </div>
           </div>
         </div>
-        <button
-          className="btn btn-primary"
-          onClick={this.loadSampleRestaurants}
-        >
-          Laod data
-        </button>
       </div>
     );
   }
