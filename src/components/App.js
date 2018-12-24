@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter , Router, Link} from 'react-router-dom';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import MainContainer from './MainContainer';
@@ -9,12 +10,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      restaurants,
+      restaurants, 
       dishes
-    };
-  }
+    }; 
+  } 
   render() {
     return (
+      <BrowserRouter>
       <div className="App">
         <div className="container">
           <div className="row">
@@ -32,6 +34,7 @@ class App extends React.Component {
           </div>
         </div>
       </div>
+      </BrowserRouter>
     );
   }
 }
