@@ -5,14 +5,13 @@ import { urlFormat } from '../helper';
 
 class Sidebar extends React.Component {
   render() {
-    console.log(urlFormat('Testing this Url'))
     const restaurants = this.props.restaurant;
     return (
       <aside>
         <h3>Restuarants</h3>
         {restaurants.map(restaurant => {
           return (
-            <Link to={`/r/${urlFormat(restaurant.name)}`}>
+            <Link to={`/restaurant/${urlFormat(restaurant.name)}`}>
               <SidebarListItem
                 key={restaurant.name}
                 restaurantName={restaurant.name}
