@@ -5,7 +5,7 @@ import { urlFormat } from '../helper';
 
 class Sidebar extends React.Component {
   render() {
-    const restaurants = this.props.restaurant;
+    const { restaurants, onRestaurantSelect } = this.props;
     return (
       <aside>
         <h3>Restuarants</h3>
@@ -16,10 +16,8 @@ class Sidebar extends React.Component {
               key={restaurant.name}
             >
               <SidebarListItem
-                restaurantName={restaurant.name}
-                restaurantDesc={restaurant.tagline}
-                restaurantReview={`${restaurant.rating} Stars`}
-                restaurantImage={restaurant.image}
+                restaurant={restaurant}
+                onRestaurantSelect={onRestaurantSelect}
               />
             </Link>
           );

@@ -6,19 +6,8 @@ class MainContainer extends React.Component {
     return (
       <main className="row">
         <div className="col-12">
-          <h2>Restaurant Name</h2>
+          <h2>{this.props.name}</h2>
         </div>
-        {this.props.dishes.map(dish => {
-          return (
-            <div className="col-4" key={dish.name}>
-              <ItemCard
-                itemTitle={dish.name}
-                itemDesc={dish.desc}
-                itemImage={dish.image}
-              />
-            </div>
-          );
-        })}
       </main>
     );
   }

@@ -9,21 +9,25 @@ const restaurants = [
     rating: 5,
     dishes: [
       {
-        name: 'Dish 1',
-        description: 'This is the first dish for the restaurant Chuys',
-        rating: '5 Stars'
+        name: 'Tacos',
+        desc: 'Yummy pork tacos',
+        image:
+          'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80'
       },
       {
-        name: 'Dish 2',
-        description: 'This is the second dish for the restaurant Chuys',
-        rating: '3 Stars'
+        name: 'Salsa',
+        desc: 'Freshly made, spicy salsa',
+        image:
+          'https://images.unsplash.com/photo-1514518189759-94d8ee01ecf1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80'
       },
       {
-        name: 'Dish 3',
-        description: 'This is the third dish for the restaurant Chuys',
-        rating: '4 Stars'
+        name: 'Margarita',
+        desc: 'Top shelf, classic margarita',
+        image:
+          'https://images.unsplash.com/photo-1541976076758-347942db1975?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1947&q=80'
       }
-    ]
+    ],
+    id: 1
   },
   {
     name: 'Pinthouse Pizza',
@@ -52,7 +56,8 @@ const restaurants = [
           'This is the third dish for the restaurant Pinthouse Pizza',
         rating: '4 Stars'
       }
-    ]
+    ],
+    id: 2
   },
   {
     name: 'Blue Corn Harvest',
@@ -81,7 +86,8 @@ const restaurants = [
           'This is the third dish for the restaurant Blue Corn Harvest',
         rating: '4 Stars'
       }
-    ]
+    ],
+    id: 3
   },
   {
     name: "Eddie V's",
@@ -107,7 +113,8 @@ const restaurants = [
         description: 'This is the third dish for the restaurant Eddie Vs',
         rating: '4 Stars'
       }
-    ]
+    ],
+    id: 4
   },
   {
     name: 'Black Star Coop',
@@ -136,7 +143,8 @@ const restaurants = [
           'This is the third dish for the restaurant Black Star Coop',
         rating: '4 Stars'
       }
-    ]
+    ],
+    id: 6
   },
   {
     name: "Chi'lantro BBQ",
@@ -162,7 +170,8 @@ const restaurants = [
         description: 'This is the third dish for the restaurant Chilantro BBQ',
         rating: '4 Stars'
       }
-    ]
+    ],
+    id: 7
   }
 ];
 
