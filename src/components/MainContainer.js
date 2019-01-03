@@ -10,7 +10,7 @@ class MainContainer extends React.Component {
         </div>
         {this.props.dishes.map(dish => {
           return (
-            <div className="col-4">
+            <div className="col-4" key={dish.name}>
               <ItemCard
                 itemTitle={dish.name}
                 itemDesc={dish.desc}

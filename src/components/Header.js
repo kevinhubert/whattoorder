@@ -5,7 +5,9 @@ class Header extends React.Component {
     return (
       <header className="border-bottom d-flex justify-content-between">
         <h1>{this.props.title}</h1>
-        <a href="/" class="btn btn-primary float-right">Back To Home</a>
+        <a href="/" className="btn btn-primary float-right">
+          Back To Home
+        </a>
       </header>
     );
   }

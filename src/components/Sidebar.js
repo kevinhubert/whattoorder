@@ -11,9 +11,11 @@ class Sidebar extends React.Component {
         <h3>Restuarants</h3>
         {restaurants.map(restaurant => {
           return (
-            <Link to={`/restaurant/${urlFormat(restaurant.name)}`}>
+            <Link
+              to={`/restaurant/${urlFormat(restaurant.name)}`}
+              key={restaurant.name}
+            >
               <SidebarListItem
-                key={restaurant.name}
                 restaurantName={restaurant.name}
                 restaurantDesc={restaurant.tagline}
                 restaurantReview={`${restaurant.rating} Stars`}

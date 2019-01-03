@@ -12,7 +12,7 @@ class ItemCard extends React.Component {
       backgroundSize: 'cover',
       height: '100px'
     };
-
+    console.log(this.props.dishes);
     return (
       <div className="card item-card" style={itemCardStyles}>
         <div className="card-img-top" style={imageStyles} />
